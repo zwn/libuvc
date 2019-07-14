@@ -501,6 +501,7 @@ void uvc_free_device_descriptor(
 
 uint8_t uvc_get_bus_number(uvc_device_t *dev);
 uint8_t uvc_get_device_address(uvc_device_t *dev);
+int uvc_get_device_port_numbers(uvc_device_t *dev, uint8_t *port_numbers, int port_numbers_len);
 
 uvc_error_t uvc_find_device(
     uvc_context_t *ctx,

@@ -267,6 +267,10 @@ uint8_t uvc_get_device_address(uvc_device_t *dev) {
   return libusb_get_device_address(dev->usb_dev);
 }
 
+int uvc_get_device_port_numbers(uvc_device_t *dev, uint8_t *port_numbers, int port_numbers_len) {
+  return libusb_get_port_numbers(dev->usb_dev, port_numbers, port_numbers_len);
+}
+
 /** @brief Open a UVC device
  * @ingroup device
  *
